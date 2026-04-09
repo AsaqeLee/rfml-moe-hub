@@ -1,0 +1,908 @@
+{
+  "individual_experts": {
+    "baseline": {
+      "best_classifier": "Random Forest",
+      "accuracy": 0.975,
+      "f1_macro": 0.9713569638381668,
+      "f1_weighted": 0.974937343358396,
+      "per_class_accuracy": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 0.9,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 0.9
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18
+        ]
+      ],
+      "n_features": 17
+    },
+    "iq_stat": {
+      "best_classifier": "Random Forest",
+      "accuracy": 0.9875,
+      "f1_macro": 0.985709818636648,
+      "f1_weighted": 0.987496091307067,
+      "per_class_accuracy": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 0.95,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 0.95
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          19,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          19
+        ]
+      ],
+      "n_features": 37
+    },
+    "spectrogram": {
+      "best_classifier": "Random Forest",
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "per_class_accuracy": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 1.0,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "n_features": 37
+    },
+    "hos": {
+      "best_classifier": "Random Forest",
+      "accuracy": 0.9375,
+      "f1_macro": 0.9277284852197745,
+      "f1_weighted": 0.9367624245673024,
+      "per_class_accuracy": {
+        "APRS": 0.95,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 0.75,
+        "ISM_sensors": 0.9,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 0.9
+      },
+      "confusion_matrix": [
+        [
+          19,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          15,
+          3,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          18,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          18
+        ]
+      ],
+      "n_features": 20
+    },
+    "cyclo": {
+      "best_classifier": "Gradient Boosting",
+      "accuracy": 0.95625,
+      "f1_macro": 0.9495901821483217,
+      "f1_weighted": 0.9558914093797816,
+      "per_class_accuracy": {
+        "APRS": 0.85,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 0.8,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      },
+      "confusion_matrix": [
+        [
+          17,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          16,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "n_features": 64
+    },
+    "combined": {
+      "best_classifier": "Random Forest",
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "per_class_accuracy": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 1.0,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "n_features": 158
+    }
+  },
+  "ensemble_methods": {
+    "majority_vote": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "per_class": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 1.0,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      }
+    },
+    "soft_vote": {
+      "accuracy": 0.99375,
+      "f1_macro": 0.9928526757795051,
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          19,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "per_class": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 0.95,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      }
+    },
+    "stacking": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "per_class": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 1.0,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      }
+    },
+    "learned_gating": {
+      "accuracy": 0.9875,
+      "f1_macro": 0.9875600369579993,
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          39,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          19,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "per_class": {
+        "APRS": 1.0,
+        "FM_broadcast": 0.975,
+        "FRS_GMRS": 0.95,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      }
+    },
+    "oracle": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0
+    },
+    "feature_concat": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20
+        ]
+      ],
+      "per_class": {
+        "APRS": 1.0,
+        "FM_broadcast": 1.0,
+        "FRS_GMRS": 1.0,
+        "ISM_sensors": 1.0,
+        "NOAA_weather": 1.0,
+        "noise": 1.0,
+        "pager": 1.0
+      }
+    }
+  },
+  "improvements": {
+    "feature_selection": {
+      "all_features_acc": 1.0,
+      "selected_50_acc": 0.9625,
+      "improvement": -0.03749999999999998
+    },
+    "gradient_boosting": {
+      "accuracy": 0.94375,
+      "f1_macro": 0.9473295714328713,
+      "vs_rf_delta": -0.05625000000000002
+    },
+    "hierarchical": {
+      "stage1_accuracy": 0.99375,
+      "final_accuracy": 0.99375,
+      "f1_macro": 0.9928526757795051,
+      "vs_flat_delta": -0.006249999999999978
+    },
+    "confidence_routing": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0
+    }
+  }
+}

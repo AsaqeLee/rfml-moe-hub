@@ -1,0 +1,170 @@
+{
+  "yolov8n-cls": {
+    "accuracy": 0.98125,
+    "f1_macro": 0.9787284144427002,
+    "per_class": {
+      "APRS": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1-score": 0.9743589743589743,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.95,
+        "recall": 0.95,
+        "f1-score": 0.95,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1-score": 0.9743589743589743,
+        "support": 20.0
+      }
+    },
+    "model_name": "yolov8n-cls"
+  },
+  "yolo11n-cls": {
+    "accuracy": 0.99375,
+    "f1_macro": 0.9928526757795051,
+    "per_class": {
+      "APRS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1-score": 0.9743589743589743,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      }
+    },
+    "model_name": "yolo11n-cls"
+  },
+  "ResNet50-DETR-backbone": {
+    "accuracy": 0.9625,
+    "f1_macro": 0.9569004220167011,
+    "per_class": {
+      "APRS": {
+        "precision": 1.0,
+        "recall": 0.85,
+        "f1-score": 0.918918918918919,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.8695652173913043,
+        "recall": 1.0,
+        "f1-score": 0.9302325581395349,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.8695652173913043,
+        "recall": 1.0,
+        "f1-score": 0.9302325581395349,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 0.85,
+        "f1-score": 0.918918918918919,
+        "support": 20.0
+      }
+    },
+    "model_name": "ResNet50-DETR-backbone",
+    "params": 23522375
+  },
+  "RF-Spectrogram-37feat": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "type": "Statistical"
+  },
+  "ConvNeXt-Tiny-Spec": {
+    "accuracy": 0.981,
+    "f1_macro": 0.978,
+    "type": "DL-Custom"
+  },
+  "ResNet1D-IQ": {
+    "accuracy": 0.869,
+    "f1_macro": 0.86,
+    "type": "DL-Custom"
+  },
+  "RF-Baseline-17feat": {
+    "accuracy": 0.975,
+    "f1_macro": 0.971,
+    "type": "Statistical"
+  }
+}

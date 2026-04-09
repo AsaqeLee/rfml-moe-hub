@@ -1,0 +1,1302 @@
+{
+  "IQ-CNN-Transformer": {
+    "accuracy": 0.80625,
+    "f1_macro": 0.7279480152226706,
+    "per_class": {
+      "APRS": {
+        "precision": 0.7307692307692307,
+        "recall": 0.95,
+        "f1-score": 0.8260869565217391,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.9230769230769231,
+        "recall": 0.6,
+        "f1-score": 0.7272727272727273,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0,
+        0,
+        0,
+        12,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        18
+      ]
+    ],
+    "inference_time_ms": 57.11356997489929,
+    "params": 548839,
+    "best_val_acc": 0.859375
+  },
+  "Spectrogram-CNN": {
+    "accuracy": 0.89375,
+    "f1_macro": 0.91124479810686,
+    "per_class": {
+      "APRS": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.5806451612903226,
+        "recall": 0.9,
+        "f1-score": 0.7058823529411765,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        25,
+        0,
+        13,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        18,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ]
+    ],
+    "inference_time_ms": 52.221907675266266,
+    "params": 1440007,
+    "best_val_acc": 0.921875
+  },
+  "FT-Transformer-HOS": {
+    "accuracy": 0.76875,
+    "f1_macro": 0.7297225808413417,
+    "per_class": {
+      "APRS": {
+        "precision": 0.4594594594594595,
+        "recall": 0.85,
+        "f1-score": 0.5964912280701754,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 0.9302325581395349,
+        "recall": 1.0,
+        "f1-score": 0.963855421686747,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 1.0,
+        "recall": 0.65,
+        "f1-score": 0.7878787878787878,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.625,
+        "recall": 0.25,
+        "f1-score": 0.35714285714285715,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.8235294117647058,
+        "recall": 0.7,
+        "f1-score": 0.7567567567567568,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        17,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        13,
+        3,
+        1,
+        0,
+        1
+      ],
+      [
+        4,
+        0,
+        0,
+        14,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        14,
+        0,
+        0,
+        0,
+        0,
+        5,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        0,
+        2,
+        1,
+        14
+      ]
+    ],
+    "inference_time_ms": 44.86768990755081,
+    "params": 104519,
+    "best_val_acc": 0.8125
+  },
+  "Dilated-TCN-Cyclo": {
+    "accuracy": 0.55,
+    "f1_macro": 0.37395330891071676,
+    "per_class": {
+      "APRS": {
+        "precision": 0.3389830508474576,
+        "recall": 1.0,
+        "f1-score": 0.5063291139240507,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 0.975609756097561,
+        "recall": 1.0,
+        "f1-score": 0.9876543209876543,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.5454545454545454,
+        "recall": 0.9,
+        "f1-score": 0.6792452830188679,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1-score": 0.4444444444444444,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        15,
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        18,
+        1,
+        0,
+        0
+      ],
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        8,
+        1,
+        0,
+        0,
+        1,
+        10,
+        0
+      ]
+    ],
+    "inference_time_ms": 42.557355761528015,
+    "params": 159111,
+    "best_val_acc": 0.5859375
+  },
+  "ResNet1D": {
+    "accuracy": 0.86875,
+    "f1_macro": 0.888565558699211,
+    "per_class": {
+      "APRS": {
+        "precision": 0.5588235294117647,
+        "recall": 0.95,
+        "f1-score": 0.7037037037037037,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 0.9259259259259259,
+        "recall": 0.625,
+        "f1-score": 0.746268656716418,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9,
+        "f1-score": 0.9230769230769231,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 0.85,
+        "f1-score": 0.918918918918919,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        15,
+        25,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        18,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        17
+      ]
+    ],
+    "inference_time_ms": 58.07942748069763,
+    "params": 959687,
+    "best_val_acc": 0.921875
+  },
+  "SE-ResNet1D": {
+    "accuracy": 0.7375,
+    "f1_macro": 0.7320704784119417,
+    "per_class": {
+      "APRS": {
+        "precision": 0.7619047619047619,
+        "recall": 0.8,
+        "f1-score": 0.7804878048780488,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.5135135135135135,
+        "recall": 0.95,
+        "f1-score": 0.6666666666666666,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.11764705882352941,
+        "recall": 0.1,
+        "f1-score": 0.10810810810810811,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        16,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        25,
+        0,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        19,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        18,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ]
+    ],
+    "inference_time_ms": 56.92760646343231,
+    "params": 1046823,
+    "best_val_acc": 0.8125
+  },
+  "MCLDNN": {
+    "accuracy": 0.63125,
+    "f1_macro": 0.6043208252396017,
+    "per_class": {
+      "APRS": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.5,
+        "recall": 0.95,
+        "f1-score": 0.6551724137931034,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.1111111111111111,
+        "recall": 0.05,
+        "f1-score": 0.06896551724137931,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.6086956521739131,
+        "recall": 0.7,
+        "f1-score": 0.6511627906976745,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.8,
+        "recall": 0.6,
+        "f1-score": 0.6857142857142857,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        9,
+        1
+      ],
+      [
+        15,
+        25,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        19,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        18,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        14,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        7,
+        0,
+        0,
+        12
+      ]
+    ],
+    "inference_time_ms": 59.40130054950714,
+    "params": 231239,
+    "best_val_acc": 0.6640625
+  },
+  "CLDNN": {
+    "accuracy": 0.65,
+    "f1_macro": 0.6493665051504773,
+    "per_class": {
+      "APRS": {
+        "precision": 0.36666666666666664,
+        "recall": 0.55,
+        "f1-score": 0.44,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.55,
+        "recall": 0.55,
+        "f1-score": 0.55,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.52,
+        "recall": 0.65,
+        "f1-score": 0.5777777777777777,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.8235294117647058,
+        "recall": 0.7,
+        "f1-score": 0.7567567567567568,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0
+      ],
+      [
+        14,
+        25,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        11,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        9,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        13,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        3,
+        14
+      ]
+    ],
+    "inference_time_ms": 58.08127224445343,
+    "params": 785223,
+    "best_val_acc": 0.6953125
+  },
+  "ConvNeXt-Tiny-Spec": {
+    "accuracy": 0.98125,
+    "f1_macro": 0.9781299467710618,
+    "per_class": {
+      "APRS": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 1.0,
+        "recall": 0.85,
+        "f1-score": 0.918918918918919,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        17
+      ]
+    ],
+    "inference_time_ms": 44.377051293849945,
+    "params": 703447,
+    "best_val_acc": 1.0
+  },
+  "Lightweight-ViT-Spec": {
+    "accuracy": 0.9125,
+    "f1_macro": 0.9107259253600717,
+    "per_class": {
+      "APRS": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9,
+        "f1-score": 0.9230769230769231,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.9411764705882353,
+        "recall": 0.8,
+        "f1-score": 0.8648648648648649,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.8571428571428571,
+        "recall": 0.9,
+        "f1-score": 0.8780487804878049,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        16
+      ]
+    ],
+    "inference_time_ms": 42.71740019321442,
+    "params": 702855,
+    "best_val_acc": 0.953125
+  },
+  "InceptionTime-1D": {
+    "accuracy": 0.7625,
+    "f1_macro": 0.715176812834846,
+    "per_class": {
+      "APRS": {
+        "precision": 0.5151515151515151,
+        "recall": 0.85,
+        "f1-score": 0.6415094339622641,
+        "support": 20.0
+      },
+      "FM_broadcast": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 40.0
+      },
+      "FRS_GMRS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "ISM_sensors": {
+        "precision": 0.5263157894736842,
+        "recall": 1.0,
+        "f1-score": 0.6896551724137931,
+        "support": 20.0
+      },
+      "NOAA_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "noise": {
+        "precision": 0.8695652173913043,
+        "recall": 1.0,
+        "f1-score": 0.9302325581395349,
+        "support": 20.0
+      },
+      "pager": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        17,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        15,
+        25,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        18,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ]
+    ],
+    "inference_time_ms": 58.96598696708679,
+    "params": 457783,
+    "best_val_acc": 0.796875
+  },
+  "RF-Baseline-17feat": {
+    "accuracy": 0.975,
+    "f1_macro": 0.971,
+    "params": 0,
+    "inference_time_ms": 0.5
+  },
+  "RF-IQ-Stat-37feat": {
+    "accuracy": 0.988,
+    "f1_macro": 0.986,
+    "params": 0,
+    "inference_time_ms": 0.5
+  },
+  "RF-Spectrogram-37feat": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "params": 0,
+    "inference_time_ms": 1.0
+  },
+  "RF-Combined-158feat": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "params": 0,
+    "inference_time_ms": 2.0
+  }
+}

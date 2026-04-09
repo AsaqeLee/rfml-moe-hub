@@ -1,0 +1,23 @@
+# Large files
+checkpoints/*.pt
+intermediate/
+*.npz
+*.npy
+*.rar
+*.iq
+
+# Datasets
+datasets/data/
+
+# OS
+.DS_Store
+__pycache__/
+*.pyc
+.omc/
+
+# Logs
+logs/*.log
+
+# Editor
+.vscode/
+.idea/
