@@ -426,3 +426,217 @@ Tier 3 — Command (Server + MI300X):
 ---
 
 *Sources: [gamutRF](https://github.com/IQTLabs/gamutRF), [rfml](https://github.com/IQTLabs/rfml), [RFClassification](https://github.com/IQTLabs/RFClassification), [BirdsEye](https://github.com/IQTLabs/BirdsEye), [gr-iqtlabs](https://github.com/IQTLabs/gr-iqtlabs), [TorchSig](https://github.com/TorchDSP/torchsig)*
+
+---
+
+## 8. Additive Model Integration (Not Replacement)
+
+**Key principle**: Our RFML-MoE experts are ADDED alongside GamutRF's existing models (EfficientNet-B0, YOLOv8n). Users choose which model(s) to use via configuration.
+
+### 8.1 Model Registry Architecture
+
+```yaml
+# gamutrf_models.yml — User selects model(s) to run
+
+models:
+  # === EXISTING IQTLABS MODELS (preserved) ===
+  efficientnet_b0_iq:
+    type: iq
+    source: iqtlabs/rfml
+    mar: efficientnet_b0_iq.mar
+    input_samples: 1024
+    enabled: true
+
+  yolov8n_spectrogram:
+    type: spectrogram
+    source: iqtlabs/rfml
+    mar: yolov8n_spec.mar
+    input_size: 640
+    task: detection  # bounding boxes, not classification
+    enabled: true
+
+  # === NEW RFML-MOE EXPERTS (additive) ===
+  lwm_expert:
+    type: iq
+    source: rfml-moe
+    mar: lwm_expert.mar
+    input_samples: 32768
+    accuracy: "94.1% (RFUAV 37-class)"
+    params: 1.3M
+    enabled: false  # User opts in
+
+  maxvit_base:
+    type: spectrogram
+    source: rfml-moe/timm
+    mar: maxvit_base.mar
+    input_size: 224
+    accuracy: "97.8% (RFUAV 37-class)"
+    params: 119M
+    enabled: false
+
+  tfms_expert:
+    type: iq
+    source: rfml-moe
+    mar: tfms_expert.mar
+    input_samples: 32768
+    accuracy: "82.3% (RFUAV 37-class)"
+    params: 0.6M
+    enabled: false
+
+  convnext_base:
+    type: spectrogram
+    source: rfml-moe/timm
+    mar: convnext_base.mar
+    input_size: 224
+    accuracy: "97.5% (RFUAV 37-class)"
+    params: 88M
+    enabled: false
+
+  mobilenetv3_edge:
+    type: spectrogram
+    source: rfml-moe/timm
+    mar: mobilenetv3.mar
+    input_size: 224
+    accuracy: "97.1% (RFUAV 37-class)"
+    params: 4.2M
+    note: "Best for edge deployment"
+    enabled: false
+
+  full_moe:
+    type: moe
+    source: rfml-moe
+    mar: rfml_moe_11expert.mar
+    experts: [lwm, spectrogram, tfms, hiwavetst, neurosymbolic, iqformer, mamba, signalformer, visual_rf, vmd_gaf, hos]
+    routing: snr_adaptive
+    accuracy: "Combined ensemble"
+    enabled: false
+
+# === MIXING STRATEGY ===
+mixing:
+  mode: single  # single | vote | weighted | moe_routing
+  # single:      Run one selected model
+  # vote:        Majority vote across enabled models
+  # weighted:    Confidence-weighted combination
+  # moe_routing: SNR-adaptive expert selection (full MoE)
+```
+
+### 8.2 Multi-Model Inference Flow
+
+```
+                    IQ Input from Scanner
+                           │
+                           ▼
+                  ┌────────────────┐
+                  │ Model Selector │ ← reads gamutrf_models.yml
+                  │ (config-driven)│
+                  └───────┬────────┘
+                          │
+           ┌──────────────┼──────────────┐
+           ▼              ▼              ▼
+    ┌────────────┐ ┌────────────┐ ┌────────────┐
+    │ IQTLabs    │ │ RFML-MoE   │ │ RFML-MoE   │
+    │EffNet-B0   │ │ LWMExpert  │ │ MaxViT     │
+    │(existing)  │ │ (new)      │ │ (new)      │
+    └─────┬──────┘ └─────┬──────┘ └─────┬──────┘
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+                ┌────────────────┐
+                │  Mixer/Combiner│ ← mode from config
+                │  (vote/weight/ │
+                │   single/moe)  │
+                └───────┬────────┘
+                        ▼
+                 Classification Result
+                 + per-model confidences
+```
+
+### 8.3 TorchServe Multi-Model Serving
+
+TorchServe natively supports serving multiple .mar models simultaneously:
+
+```bash
+# Register ALL models — user enables/disables via config
+torch-model-archiver --model-name efficientnet_b0_iq ...   # existing
+torch-model-archiver --model-name lwm_expert ...            # new
+torch-model-archiver --model-name maxvit_base ...           # new
+torch-model-archiver --model-name mobilenetv3_edge ...      # new
+
+# Start TorchServe with all models
+torchserve --start --model-store /model_store \
+  --models \
+    efficientnet_b0=efficientnet_b0_iq.mar \
+    lwm_expert=lwm_expert.mar \
+    maxvit=maxvit_base.mar \
+    mobilenetv3=mobilenetv3_edge.mar
+
+# Inference selects which model(s) via REST endpoint:
+# Single:   POST /predictions/lwm_expert
+# Compare:  POST /predictions/efficientnet_b0 + POST /predictions/lwm_expert
+# The mixer aggregates responses
+```
+
+### 8.4 Backward Compatibility
+
+- **Zero breaking changes**: All existing GamutRF configs continue to work
+- **Opt-in new models**: Users explicitly enable RFML-MoE models in config
+- **Gradual adoption**: Start with one new model (LWMExpert), add more as validated
+- **A/B comparison**: Run existing + new in parallel, compare outputs in logs
+- **Fallback**: If RFML-MoE model fails, fall back to existing EfficientNet-B0
+
+---
+
+## 9. Additional Technical Details (from Deep Research)
+
+### GamutRF Scanner Parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| sample_rate | 4.096 MHz (scan), 20.48 MHz (record) | SDR sample rate |
+| fft_size | 1024 | FFT points per transform |
+| gain | 40 | SDR gain (dB) |
+| freq_start | 100 MHz | Sweep start |
+| freq_end | 6 GHz | Sweep end |
+| tuneoverlap | 0.5 | Frequency step overlap |
+| confidence_threshold | 0.25 | ML confidence cutoff |
+
+### Sigfinder Signal Detection Pipeline
+
+1. Correct FFT points to frequency order
+2. Compute mean power over 10 kHz bins
+3. Rolling mean over 1 MHz windows
+4. `scipy.signal.find_peaks()` for peak detection
+5. Each peak assigned a 20 MHz bin
+6. Command workers to record ~10s IQ at ~20 Msps
+
+### rfml Auto-Labeling (annotation_utils.py)
+
+- DSP-based signal detection via power thresholding
+- Gaussian Mixture Model (2 components) separates noise vs signal
+- Threshold: `min(GMM_means) + 2 * sqrt(noise_covariance)`
+- Spectral energy bandwidth estimation
+
+### Communication Interfaces
+
+| Interface | Protocol | Port | Data |
+|-----------|----------|------|------|
+| Scanner → Sigfinder | ZMQ JSON | 10000 | FFT power points |
+| Scanner → Workers | ZMQ | 10002 | IQ samples + tags |
+| Scanner → TorchServe | HTTP REST | 8080 | Inference |
+| All → MQTT | MQTT | 1883 | Status/events |
+| Waterfall → User | Flask HTTP | 9003 | Web UI |
+
+### Multi-Platform TorchServe Containers (IQTLabs)
+
+| Container | Platform | GPU |
+|-----------|----------|-----|
+| iqtlabs/torchserve | arm64 + amd64 | CPU |
+| iqtlabs/cuda-torchserve | amd64 | CUDA 12.5+ |
+| iqtlabs/orin-torchserve | arm64 | Jetson Orin |
+
+### Key Risk: Spectrogram Incompatibility
+
+GamutRF uses FFT-1024/Hann/turbo/640x640 for YOLOv8 detection.
+Our MoE uses FFT-256/Hamming/Hot/variable for classification.
+**Solution**: Bypass GamutRF spectrograms — take raw IQ and generate our own.
+Both systems can coexist: GamutRF spectrograms for YOLO detection, our spectrograms for MoE classification.
