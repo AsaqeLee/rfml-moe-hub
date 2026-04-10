@@ -345,3 +345,133 @@ If you use this research or codebase, please cite:
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 Individual datasets have their own licenses -- see each dataset's documentation for details.
+
+---
+
+## IQTLabs GamutRF Comparison (NEW)
+
+Head-to-head benchmark of IQTLabs models vs our RFML-MoE on the same datasets:
+
+### RFUAV 37-Class Drone Identification
+
+| Model | Source | Accuracy | F1 | Params |
+|-------|--------|----------|-----|--------|
+| MaxViT-Base | **Ours** | **97.8%** | 0.972 | 118.7M |
+| ConvNeXt-Base | **Ours** | **97.5%** | 0.970 | 87.6M |
+| Combined RF (stats) | **Ours** | **95.7%** | - | ~200KB |
+| LWMExpert (raw IQ) | **Ours** | **94.1%** | 0.944 | 1.3M |
+| EfficientNet-B0 IQ | IQTLabs | 90.6% | 0.882 | ~5M |
+| VGG16 Spectrogram | IQTLabs | ~80% | - | 138M |
+| PSD + SVM | IQTLabs | 20.6% | 0.119 | - |
+| RFUAV-Net (1D CNN) | IQTLabs | 11.8% | 0.006 | 67M |
+
+Our models outperform IQTLabs by **+3.5% to +86%** across all comparisons.
+
+### Integration with GamutRF
+
+Models are **additive** — not replacing IQTLabs models but extending the model registry:
+- Users choose models via YAML config (`gamutrf_models.yml`)
+- Mixing modes: single model, voting, weighted, full MoE routing
+- TorchServe `.mar` export for direct GamutRF deployment
+- See [docs/IQTLABS_GAMUTRF_REPORT.md](docs/IQTLABS_GAMUTRF_REPORT.md) for full integration plan
+
+---
+
+## Survey Documents
+
+- [RF Drone Detection SOTA Models](docs/RF_Drone_Detection_SOTA_Models.md) — Comprehensive survey of state-of-the-art models for RF-based drone detection
+- [RF ML Practitioner's Survey](docs/RF_ML_Practitioners_Survey.md) — Technical survey on RF machine learning for drone detection and edge deployment
+
+---
+
+## References & Papers
+
+### Architectures Implemented
+
+| Architecture | Paper | Year | Our Implementation |
+|-------------|-------|------|-------------------|
+| MaxViT | Tu et al., "MaxViT: Multi-Axis Vision Transformer" (ECCV 2022) | 2022 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| ConvNeXt | Liu et al., "A ConvNet for the 2020s" (CVPR 2022) | 2022 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| EfficientNet | Tan & Le, "EfficientNet: Rethinking Model Scaling" (ICML 2019) | 2019 | `models/rfml_moe/experts/spectrogram_expert.py` |
+| Vision Transformer (ViT) | Dosovitskiy et al., "An Image is Worth 16x16 Words" (ICLR 2021) | 2021 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| Swin Transformer | Liu et al., "Swin Transformer V2" (CVPR 2022) | 2022 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| DeiT III | Touvron et al., "DeiT III: Revenge of the ViT" (ECCV 2022) | 2022 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| EVA-02 | Fang et al., "EVA-02: A Visual Representation for Neon Genesis" (2023) | 2023 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| YOLOv8/v11 | Jocher et al., Ultralytics YOLO (2023-2025) | 2023+ | `experiments/rtl_ml/yolo_detr_comparison.py` |
+| RT-DETR | Lv et al., "DETRs Beat YOLOs on Real-time Object Detection" (2023) | 2023 | `experiments/rtl_ml/yolo_detr_comparison.py` |
+| MobileNetV3 | Howard et al., "Searching for MobileNetV3" (ICCV 2019) | 2019 | `experiments/rfuav/train_rfuav.py` (via timm) |
+| ResNet | He et al., "Deep Residual Learning" (CVPR 2016) | 2016 | `experiments/rtl_ml/nn_comparison.py` |
+| VGG16 | Simonyan & Zisserman, "Very Deep Convolutional Networks" (ICLR 2015) | 2015 | `experiments/rfuav/iqtlabs_benchmark.py` |
+| InceptionTime | Fawaz et al., "InceptionTime: Finding AlexNet for Time Series" (DMKD 2020) | 2020 | `experiments/rtl_ml/nn_comparison.py` |
+
+### RFML-MoE Expert Architectures
+
+| Expert | Based On | Paper/Reference | Our Implementation |
+|--------|----------|-----------------|-------------------|
+| LWMExpert | Large Wireless Model 1.1 | Shao et al., "A Wireless Foundation Model" (2024) | `models/rfml_moe/experts/lwm_expert.py` |
+| TFMSExpert | Time-Freq Multiscale CNN | Mandal & Satija, "Time-Frequency Multiscale CNN for RF" (2023) | `models/rfml_moe/experts/tfms_expert.py` |
+| HiWaveTSTExpert | HiWave-TST | arXiv:2511.01254 "Hierarchical Wavelet TST" (2025) | `models/rfml_moe/experts/hiwavetst_expert.py` |
+| VMDGAFExpert | VMD + Gramian Angular Field | Fu et al., "VMD and GAF Empowered CNN for Drone RF" (2026) | `models/rfml_moe/experts/vmd_gaf_expert.py` |
+| SignalFormerRFExpert | SignalFormer | Inspired by Dong et al., "SignalFormer" (2024) | `models/rfml_moe/experts/signalformer_expert.py` |
+| IQFormerExpert | IQFormer | Li et al., "IQFormer: Multi-Modality Fusion for AMR" (IEEE TCCN 2025) | `models/rfml_moe/experts/iqformer_expert.py` |
+| MambaIQExpert | Mamba SSM | Gu & Dao, "Mamba: Linear-Time Sequence Modeling" (2024) | `models/rfml_moe/experts/mamba_iq_expert.py` |
+| NeuroSymbolicRFFExpert | Shapelet-based RFF | Inspired by Grabocka et al., "Learning Shapelets" (2014) | `models/rfml_moe/experts/neurosymbolic_rff_expert.py` |
+| VisualRFDetector | DETR | Carion et al., "End-to-End Object Detection with Transformers" (ECCV 2020) | `models/rfml_moe/experts/visual_rf_detector.py` |
+| MultiScale-LWM-MaxViT | LWM + MaxViT fusion | **Novel** (this work) | `models/multiscale_lwm_maxvit.py` |
+
+### Feature Extraction Methods
+
+| Method | Reference | Implementation |
+|--------|-----------|---------------|
+| Higher-Order Statistics (HOS) | Swami & Sadler, "Hierarchical Digital Modulation Classification" (2000) | `models/rfml_moe/hos.py` |
+| Cyclostationary (SCF) | Gardner, "Exploitation of Spectral Redundancy in Cyclostationary Signals" (1991) | `models/rfml_moe/cyclostationary.py` |
+| VMD (Variational Mode Decomposition) | Dragomiretskiy & Zosso, "VMD" (IEEE TSP 2014) | `models/rfml_moe/vmd.py` |
+| GAF (Gramian Angular Field) | Wang & Oates, "Encoding Time Series as Images" (2015) | `models/rfml_moe/gaf.py` |
+| EMD Denoising | Huang et al., "Empirical Mode Decomposition" (1998) | `models/rfml_moe/emd_denoising.py` |
+| Energy Gate Detection | Neyman-Pearson lemma (1933) | `models/rfml_moe/energy_gate.py` |
+| Wavelet Scattering | Mallat, "Group Invariant Scattering" (CPAM 2012) | `models/rfml_moe/wavelet.py` |
+| TorchSig Augmentation | IQTLabs/TorchSig, "RF Signal Augmentation Framework" (GRCon 2024) | External dependency |
+
+### Routing & Ensemble Methods
+
+| Method | Reference | Implementation |
+|--------|-----------|---------------|
+| Expert Choice Routing | Zhou et al., "Mixture-of-Experts with Expert Choice Routing" (NeurIPS 2022) | `models/rfml_moe/moe/router.py` |
+| SNR-Adaptive Routing | **Novel** (this work) — learned per-expert SNR bias | `models/rfml_moe/moe/router.py` |
+| DeepSeek Router | Dai et al., "DeepSeekMoE: Towards Ultimate Expert Specialization" (2024) | `models/rfml_moe/moe/advanced_routing.py` |
+| Soft MoE | Puigcerver et al., "From Sparse to Soft Mixtures of Experts" (ICLR 2024) | `models/rfml_moe/moe/advanced_routing.py` |
+| FT-Transformer | Gorishniy et al., "Revisiting Deep Learning for Tabular Data" (NeurIPS 2021) | `models/rfml_moe/experts/hos_expert.py` |
+
+### Datasets
+
+| Dataset | Paper/Source | Year |
+|---------|-------------|------|
+| RFUAV | Ren et al., "RFUAV: A Benchmark Dataset for UAV Detection" (arXiv:2503.09033) | 2025 |
+| DroneRFb-DIR | Ren et al., "DroneRFb-DIR: RF Signal Dataset for Drone Individual Identification" (JEIT 2025) | 2025 |
+| DRFF-R2 | Zheng & Gao, "A Multi-Scenario UAV RF Dataset" (arXiv:2603.00106) | 2026 |
+| RTL-ML | Unland, "Building an AI Radio Scanner with RTL-SDR" (2026) | 2026 |
+| DroneRF | Al-Sa'd et al., "DroneRF Dataset" (Data in Brief, 2019) | 2019 |
+
+### IQTLabs Ecosystem
+
+| Tool | Reference | Integration |
+|------|-----------|-------------|
+| GamutRF | IQTLabs, "SDR Orchestrated Scanner and Collector" (GitHub, archived 2025) | [Integration Plan](docs/IQTLABS_GAMUTRF_REPORT.md) |
+| rfml | IQTLabs, "RF Machine Learning Pipeline" (GitHub, archived 2025) | Model export compatibility |
+| TorchSig | IQTLabs, "RF Signal Processing Framework" (GRCon 2024-2025) | Augmentation pipeline |
+| RFClassification | IQTLabs, "RF-Based Drone Detection" (GitHub) | Benchmark comparison |
+| BirdsEye | IQTLabs, "RL-Based RF Target Localization" (GitHub) | Tracking integration |
+
+### Key AMR/Signal Classification Papers
+
+| Paper | Authors | Year | Relevance |
+|-------|---------|------|-----------|
+| MCLDNN | Wu et al., "Multi-Channel LSTM-DNN" | 2020 | Baseline IQ model (60.8% RadioML) |
+| ECDAT | Wang et al., "Efficient Conv Dual-Attention Transformer" | 2024 | Unverified SOTA (95.05% RadioML) |
+| IQFormer | Li et al., "Multi-Modality Fusion for AMR" | 2025 | Multi-modal IQ+TF fusion (68.5% RadioML) |
+| ConvMamba | "Modulation Recognition Based on Mamba" | 2025 | First SSM for AMR |
+| IQFM | "A Wireless Foundation Model for IQ Streams" | 2025 | Foundation model (99.67% few-shot) |
+| GAF-MAE | "Reconstruction-Driven ViT for AMR Under Limited Labels" | 2025 | Semi-supervised (5% labeled) |
+| RF-YOLO | "Modified YOLO for UAV Detection using RF Spectrograms" | 2025 | mAP 0.9213 on spectrograms |
+
+---
