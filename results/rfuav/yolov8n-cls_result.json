@@ -1,0 +1,6 @@
+{
+  "model": "yolov8n-cls",
+  "accuracy": 0.9629213483146067,
+  "f1_macro": 0.9510971763535239,
+  "type": "yolo-cls"
+}

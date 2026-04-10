@@ -1,0 +1,4196 @@
+{
+  "metadata": {
+    "n_samples": 3515,
+    "n_drone_types": 37,
+    "drone_types": [
+      "DAUTEL EVO NANO",
+      "DEVENTION DEVO",
+      "DJI AVATA2",
+      "DJI FPV COMBO",
+      "DJI MAVIC3 PRO",
+      "DJI MINI3",
+      "DJI MINI4 PRO",
+      "FLYSKY EL 18",
+      "FLYSKY FS I6X",
+      "FLYSKY NV 14",
+      "FRSKY X14",
+      "FRSKY X20R",
+      "FRSKY X9DP2019",
+      "FUTABA T10J",
+      "FUTABA T14SG",
+      "FUTABA T16IZ",
+      "FUTABA T18SZ",
+      "Herelink Hx4",
+      "JR PROPO XG14",
+      "JR PROPO XG7",
+      "JUMPER T14",
+      "JUMPER TProV2",
+      "RadioMaster BOXER",
+      "RadioMaster TX16S",
+      "Radiolink AT10 II",
+      "Radiolink AT9S Pro",
+      "SIYI FT24",
+      "SIYI MK15",
+      "SIYI MK32",
+      "SKYDROID H12",
+      "SKYDROID T10",
+      "WFLY ET10",
+      "WFLY ET16S",
+      "WFLY WFT09SII",
+      "YUNZHUO H12",
+      "YUNZHUO H16",
+      "YUNZHUO H30"
+    ],
+    "chunks_per_file": 10,
+    "chunk_size": 10000000,
+    "train_ratio": 0.8,
+    "modalities": [
+      "baseline",
+      "iq_stat",
+      "spectrogram",
+      "hos",
+      "combined"
+    ]
+  },
+  "results": {
+    "baseline": {
+      "RandomForest": {
+        "accuracy": 0.8978723404255319,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 17,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.8947368421052632,
+            "recall": 0.7083333333333334,
+            "f1-score": 0.7906976744186046,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1-score": 0.9090909090909091,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.7733333333333333,
+            "f1-score": 0.8721804511278195,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.725,
+            "recall": 0.8055555555555556,
+            "f1-score": 0.7631578947368421,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.8421052631578947,
+            "recall": 1.0,
+            "f1-score": 0.9142857142857143,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.4827586206896552,
+            "recall": 1.0,
+            "f1-score": 0.6511627906976745,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 0.8421052631578947,
+            "recall": 1.0,
+            "f1-score": 0.9142857142857143,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.6,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1-score": 0.875,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.9090909090909091,
+            "recall": 0.625,
+            "f1-score": 0.7407407407407407,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8461538461538461,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.9090909090909091,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.9333333333333333,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.8484848484848485,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1-score": 0.9473684210526315,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.5,
+            "recall": 0.875,
+            "f1-score": 0.6363636363636364,
+            "support": 8.0
+          },
+          "accuracy": 0.8978723404255319,
+          "macro avg": {
+            "precision": 0.8999614777291729,
+            "recall": 0.901451093951094,
+            "f1-score": 0.8904451242811354,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9017929315681952,
+            "recall": 0.8978723404255319,
+            "f1-score": 0.8903782191796521,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.060038268160042645,
+          0.09389548866597743,
+          0.11513512236966526,
+          0.04873688929973408,
+          0.05724543172434645,
+          0.11094645024611127,
+          0.14530061542400804,
+          0.03947643360203737,
+          0.00488359761198826,
+          0.05919045153260558,
+          0.004654090421861475,
+          0.0661859809818268,
+          0.014098982807941307,
+          0.013789050684715032,
+          0.003846993335048482,
+          0.0673401727065433,
+          0.09523598042554722
+        ],
+        "elapsed_s": 0.7
+      },
+      "GradientBoosting": {
+        "accuracy": 0.900709219858156,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 17,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.7083333333333334,
+            "f1-score": 0.8292682926829268,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.9880952380952381,
+            "recall": 0.9764705882352941,
+            "f1-score": 0.9822485207100592,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.92,
+            "f1-score": 0.9583333333333334,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.9166666666666666,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9166666666666666,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.8235294117647058,
+            "recall": 1.0,
+            "f1-score": 0.9032258064516129,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1-score": 0.96,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.48148148148148145,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.6341463414634146,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.5263157894736842,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "f1-score": 0.8235294117647058,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.782608695652174,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.35714285714285715,
+            "recall": 0.625,
+            "f1-score": 0.45454545454545453,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.7692307692307693,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.7407407407407407,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.9090909090909091,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.9375,
+            "recall": 0.9375,
+            "f1-score": 0.9375,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8333333333333334,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.9411764705882353,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9142857142857143,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.7272727272727273,
+            "recall": 1.0,
+            "f1-score": 0.8421052631578947,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.6153846153846154,
+            "recall": 1.0,
+            "f1-score": 0.7619047619047619,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1-score": 0.7777777777777778,
+            "support": 8.0
+          },
+          "accuracy": 0.900709219858156,
+          "macro avg": {
+            "precision": 0.8757507941331472,
+            "recall": 0.8891474247356601,
+            "f1-score": 0.870041723707457,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9096785031745401,
+            "recall": 0.900709219858156,
+            "f1-score": 0.8961324876540828,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.01809707837461801,
+          0.09376000930685897,
+          0.11168865520831454,
+          0.03415972723629593,
+          0.015108512449763146,
+          0.18536913651287276,
+          0.17532659885134594,
+          0.053947840130879,
+          0.0016787170931507034,
+          0.018440879826896222,
+          0.0021000536648288657,
+          0.017539925733616017,
+          0.00840938831392091,
+          0.008546390830584658,
+          0.0016348660473601635,
+          0.14548367110582286,
+          0.10870854931287129
+        ],
+        "elapsed_s": 57.4
+      },
+      "MLP": {
+        "accuracy": 0.7546099290780142,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 17,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.5416666666666666,
+            "f1-score": 0.7027027027027027,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.6875,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.7857142857142857,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8018867924528302,
+            "recall": 1.0,
+            "f1-score": 0.8900523560209425,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 0.8947368421052632,
+            "recall": 0.68,
+            "f1-score": 0.7727272727272727,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.9,
+            "recall": 0.75,
+            "f1-score": 0.8181818181818182,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 0.9705882352941176,
+            "recall": 0.9705882352941176,
+            "f1-score": 0.9705882352941176,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.5882352941176471,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.6451612903225806,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.29411764705882354,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.3225806451612903,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.7058823529411765,
+            "recall": 1.0,
+            "f1-score": 0.8275862068965517,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.6666666666666666,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.8571428571428571,
+            "recall": 0.75,
+            "f1-score": 0.8,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.125,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.13333333333333333,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.8333333333333334,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.4666666666666667,
+            "recall": 0.5,
+            "f1-score": 0.4827586206896552,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.6666666666666666,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.5217391304347826,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.9230769230769231,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.46153846153846156,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.35714285714285715,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.35714285714285715,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.7894736842105263,
+            "recall": 0.9375,
+            "f1-score": 0.8571428571428571,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.9,
+            "recall": 0.75,
+            "f1-score": 0.8181818181818182,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.6153846153846154,
+            "recall": 1.0,
+            "f1-score": 0.7619047619047619,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.5833333333333334,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.6666666666666666,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.4375,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.56,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.9375,
+            "recall": 0.9375,
+            "f1-score": 0.9375,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.8571428571428571,
+            "recall": 0.75,
+            "f1-score": 0.8,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.8333333333333334,
+            "recall": 0.625,
+            "f1-score": 0.7142857142857143,
+            "support": 8.0
+          },
+          "accuracy": 0.7546099290780142,
+          "macro avg": {
+            "precision": 0.6948900110949588,
+            "recall": 0.7110090342443283,
+            "f1-score": 0.692092774694537,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.7448394133797622,
+            "recall": 0.7546099290780142,
+            "f1-score": 0.7379324945502375,
+            "support": 705.0
+          }
+        },
+        "feature_importances": null,
+        "elapsed_s": 22.5
+      }
+    },
+    "iq_stat": {
+      "RandomForest": {
+        "accuracy": 0.9531914893617022,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.9444444444444444,
+            "recall": 0.7083333333333334,
+            "f1-score": 0.8095238095238095,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8018867924528302,
+            "recall": 1.0,
+            "f1-score": 0.8900523560209425,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.9866666666666667,
+            "f1-score": 0.9932885906040269,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.9230769230769231,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.7272727272727273,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "f1-score": 0.8235294117647058,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1-score": 0.875,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.875,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "accuracy": 0.9531914893617022,
+          "macro avg": {
+            "precision": 0.9760269703665929,
+            "recall": 0.9567932217932219,
+            "f1-score": 0.961410973057759,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9625915518087336,
+            "recall": 0.9531914893617022,
+            "f1-score": 0.9522195931792752,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.04058325097719229,
+          0.039826945790894755,
+          0.06169280992217248,
+          0.05196280551432367,
+          0.05248866780032346,
+          0.06252105786740504,
+          0.046256809073956386,
+          0.05528287277890649,
+          0.0010796638229723788,
+          0.03579179199120428,
+          0.04810606891374846,
+          0.0008627860928760329,
+          0.0011952783724445905,
+          0.04234954943530034,
+          0.04461407315599538,
+          0.0010220443369756418,
+          0.002693435121470943,
+          0.0018962697727001672,
+          0.0020124140003561814,
+          0.0017100493403139653,
+          0.031953659919076394,
+          0.016124260438049504,
+          0.02197840143112458,
+          0.02768986789402463,
+          0.026477933208619554,
+          0.020308948855721192,
+          0.015709922074700046,
+          0.0027968055640816966,
+          0.002400792393486395,
+          0.0032914837061961562,
+          0.0023915535831999504,
+          0.006885361001313193,
+          0.006697907404534181,
+          0.06375453369970771,
+          0.059706933405062786,
+          0.05640767544142172,
+          0.041475315898147444
+        ],
+        "elapsed_s": 0.9
+      },
+      "GradientBoosting": {
+        "accuracy": 0.9148936170212766,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.9473684210526315,
+            "recall": 0.75,
+            "f1-score": 0.8372093023255814,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.7870370370370371,
+            "recall": 1.0,
+            "f1-score": 0.8808290155440415,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.9733333333333334,
+            "f1-score": 0.9864864864864865,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.8,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "f1-score": 0.9375,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9565217391304348,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.7368421052631579,
+            "recall": 1.0,
+            "f1-score": 0.8484848484848485,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 0.6875,
+            "f1-score": 0.8148148148148148,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.2857142857142857,
+            "f1-score": 0.4444444444444444,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.7272727272727273,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.8,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8275862068965517,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.8235294117647058,
+            "recall": 1.0,
+            "f1-score": 0.9032258064516129,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.9285714285714286,
+            "recall": 0.8125,
+            "f1-score": 0.8666666666666667,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.7619047619047619,
+            "recall": 1.0,
+            "f1-score": 0.8648648648648649,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1-score": 0.9230769230769231,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.9090909090909091,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9714285714285714,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 8.0
+          },
+          "accuracy": 0.9148936170212766,
+          "macro avg": {
+            "precision": 0.9375572498637513,
+            "recall": 0.9127126706538472,
+            "f1-score": 0.9125488344032141,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9310751337157152,
+            "recall": 0.9148936170212766,
+            "f1-score": 0.91101089485044,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.025300526342754037,
+          0.11936457522742544,
+          0.03172957072639098,
+          0.03613589548090146,
+          0.03825426168595884,
+          0.03979498570942897,
+          0.034004108287805535,
+          0.07717641398729,
+          0.00014019252682493982,
+          0.0032688261269176295,
+          0.01033891701476719,
+          0.0007498788401933804,
+          0.0005106865064274231,
+          0.0066453488899986595,
+          0.0075504654657012945,
+          0.0016241836970052757,
+          0.0027772432137099933,
+          0.0014661826590190096,
+          0.0009688401659588737,
+          0.00217242871661767,
+          0.06746729348960548,
+          0.01965019545351537,
+          0.04467856602323492,
+          0.13039975084511204,
+          0.019142379862472192,
+          0.04701505550820077,
+          0.014002272446724253,
+          0.0006458597334801956,
+          0.0007710234336967178,
+          0.006310723067773712,
+          0.0003616920391609489,
+          0.0027189626156245133,
+          0.040828978082156735,
+          0.041475354547758324,
+          0.026222622131570793,
+          0.07707805385330393,
+          0.02125768559551213
+        ],
+        "elapsed_s": 108.2
+      },
+      "MLP": {
+        "accuracy": 0.8851063829787233,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.9375,
+            "recall": 0.625,
+            "f1-score": 0.75,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1-score": 0.96,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.9444444444444444,
+            "recall": 1.0,
+            "f1-score": 0.9714285714285714,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.9866666666666667,
+            "f1-score": 0.9932885906040269,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.8611111111111112,
+            "f1-score": 0.9253731343283582,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.8333333333333334,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.7692307692307693,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8333333333333334,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.8125,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.8666666666666667,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.5882352941176471,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.6451612903225806,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.7368421052631579,
+            "recall": 1.0,
+            "f1-score": 0.8484848484848485,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.7777777777777778,
+            "recall": 0.5,
+            "f1-score": 0.6086956521739131,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.782608695652174,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.16666666666666666,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.1,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.8461538461538461,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8148148148148148,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.9230769230769231,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8888888888888888,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.6923076923076923,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.6666666666666666,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.5384615384615384,
+            "recall": 0.4375,
+            "f1-score": 0.4827586206896552,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8461538461538461,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.65,
+            "recall": 0.7222222222222222,
+            "f1-score": 0.6842105263157895,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.6206896551724138,
+            "recall": 1.0,
+            "f1-score": 0.7659574468085106,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 0.625,
+            "f1-score": 0.7692307692307693,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.7272727272727273,
+            "recall": 1.0,
+            "f1-score": 0.8421052631578947,
+            "support": 8.0
+          },
+          "accuracy": 0.8851063829787233,
+          "macro avg": {
+            "precision": 0.8587274078519942,
+            "recall": 0.8542889317889317,
+            "f1-score": 0.8475674762439515,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.8869650987766078,
+            "recall": 0.8851063829787233,
+            "f1-score": 0.87905267234336,
+            "support": 705.0
+          }
+        },
+        "feature_importances": null,
+        "elapsed_s": 17.1
+      }
+    },
+    "spectrogram": {
+      "RandomForest": {
+        "accuracy": 0.9120567375886525,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.9583333333333334,
+            "f1-score": 0.9787234042553191,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1-score": 0.96,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8762886597938144,
+            "recall": 1.0,
+            "f1-score": 0.9340659340659341,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.8933333333333333,
+            "f1-score": 0.9436619718309859,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9411764705882353,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.9655172413793104,
+            "recall": 1.0,
+            "f1-score": 0.9824561403508771,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.7058823529411765,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.7741935483870968,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8571428571428571,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.9230769230769231,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8888888888888888,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1-score": 0.8888888888888888,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.8421052631578947,
+            "recall": 1.0,
+            "f1-score": 0.9142857142857143,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.8666666666666667,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.896551724137931,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.6666666666666666,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.5217391304347826,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.46153846153846156,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.4444444444444444,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.9629629629629629,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8461538461538461,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.8461538461538461,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8148148148148148,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 1.0,
+            "recall": 0.6875,
+            "f1-score": 0.8148148148148148,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.5789473684210527,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.6666666666666666,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1-score": 0.875,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8333333333333334,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1-score": 0.9032258064516129,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 1.0,
+            "recall": 0.625,
+            "f1-score": 0.7692307692307693,
+            "support": 8.0
+          },
+          "accuracy": 0.9120567375886525,
+          "macro avg": {
+            "precision": 0.9053080152256466,
+            "recall": 0.8955780780780781,
+            "f1-score": 0.8958312287963272,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9175480067967633,
+            "recall": 0.9120567375886525,
+            "f1-score": 0.9109290270759588,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.026570798246726524,
+          0.032447734172308215,
+          0.041614082947092464,
+          0.029771567989967183,
+          0.02845467423086294,
+          0.024106946660734936,
+          0.011844151149954199,
+          0.026222166598177884,
+          0.015060604154533667,
+          0.012371936977128028,
+          0.011816258631902742,
+          0.04012109105041843,
+          0.015136054217319174,
+          0.005461429154009858,
+          0.005903572200938301,
+          0.00576208926045913,
+          0.007034940595384627,
+          0.006787617284603983,
+          0.01581320810050603,
+          0.02220607122917734,
+          0.007230281261766844,
+          0.02589132615868736,
+          0.029031212782827154,
+          0.014094315646500084,
+          0.021531203142324807,
+          0.025433507926798878,
+          0.038092750203134844,
+          0.03867597514232286,
+          0.10894471159235389,
+          0.08914598998778532,
+          0.03959387702013633,
+          0.03058349300181622,
+          0.026411772086425943,
+          0.019095245940994345,
+          0.022255340096152283,
+          0.02641362249944964,
+          0.053068380658317524
+        ],
+        "elapsed_s": 0.8
+      },
+      "GradientBoosting": {
+        "accuracy": 0.8652482269503546,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.9583333333333334,
+            "f1-score": 0.9787234042553191,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.9659090909090909,
+            "recall": 1.0,
+            "f1-score": 0.9826589595375722,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.7733333333333333,
+            "f1-score": 0.8721804511278195,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.9705882352941176,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9428571428571428,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.9655172413793104,
+            "recall": 1.0,
+            "f1-score": 0.9824561403508771,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.6470588235294118,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.7096774193548387,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.7692307692307693,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.9230769230769231,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8888888888888888,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 1.0,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.88,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.875,
+            "recall": 0.5833333333333334,
+            "f1-score": 0.7,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.8,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8275862068965517,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.7894736842105263,
+            "recall": 0.9375,
+            "f1-score": 0.8571428571428571,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.9230769230769231,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8888888888888888,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.7692307692307693,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.7407407407407407,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.35294117647058826,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.3870967741935484,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.3181818181818182,
+            "recall": 0.5,
+            "f1-score": 0.3888888888888889,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 1.0,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.88,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.6470588235294118,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.7096774193548387,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.88,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.46153846153846156,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.6,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.5882352941176471,
+            "recall": 0.625,
+            "f1-score": 0.6060606060606061,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.625,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.7777777777777778,
+            "recall": 0.875,
+            "f1-score": 0.8235294117647058,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9714285714285714,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1-score": 0.9032258064516129,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.8333333333333334,
+            "recall": 0.625,
+            "f1-score": 0.7142857142857143,
+            "support": 8.0
+          },
+          "accuracy": 0.8652482269503546,
+          "macro avg": {
+            "precision": 0.8582434303422881,
+            "recall": 0.8421954096954097,
+            "f1-score": 0.8434629952568149,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.8915966953683904,
+            "recall": 0.8652482269503546,
+            "f1-score": 0.8724250253989747,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.010933806177001203,
+          0.007662655464685859,
+          0.039328759546026014,
+          0.04732234218252404,
+          0.018364087299081313,
+          0.008524998926892919,
+          0.005749491955044348,
+          0.01770538789284081,
+          0.0029195272272691205,
+          0.004862554743692998,
+          0.005195416364145915,
+          0.03479802923207689,
+          0.0074636834501477485,
+          0.001796088260696062,
+          0.004686520506809093,
+          0.0031652976875478547,
+          0.002903578924887141,
+          0.001861434382324293,
+          0.013803971322468718,
+          0.020129172291036463,
+          0.002607747485157822,
+          0.0027408929743090093,
+          0.006281963422782521,
+          0.012496524866564185,
+          0.0395539947813635,
+          0.006310754373456917,
+          0.01830159444073515,
+          0.009929945199277866,
+          0.08345054275381257,
+          0.23049190915858436,
+          0.08600043811929507,
+          0.07382495928314017,
+          0.013219143336485462,
+          0.0441606402005185,
+          0.0726444783976492,
+          0.0037541314033425724,
+          0.03505353596632622
+        ],
+        "elapsed_s": 135.6
+      },
+      "MLP": {
+        "accuracy": 0.6113475177304964,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 37,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.6470588235294118,
+            "recall": 0.4583333333333333,
+            "f1-score": 0.5365853658536586,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.6470588235294118,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.7586206896551724,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.875,
+            "recall": 0.9882352941176471,
+            "f1-score": 0.9281767955801105,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 0.9538461538461539,
+            "recall": 0.8266666666666667,
+            "f1-score": 0.8857142857142857,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.7586206896551724,
+            "recall": 0.6111111111111112,
+            "f1-score": 0.676923076923077,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 0.9705882352941176,
+            "f1-score": 0.9850746268656716,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.8484848484848485,
+            "recall": 1.0,
+            "f1-score": 0.9180327868852459,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.375,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.4,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.6666666666666666,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.6153846153846154,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.5714285714285714,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.42105263157894735,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.4,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.21052631578947367,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.14285714285714285,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.09523809523809523,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.25,
+            "recall": 0.25,
+            "f1-score": 0.25,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.0625,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.06666666666666667,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.7368421052631579,
+            "recall": 0.875,
+            "f1-score": 0.8,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.36666666666666664,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.5,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 0.9375,
+            "recall": 0.9375,
+            "f1-score": 0.9375,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.3125,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.3333333333333333,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.6666666666666666,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.6153846153846154,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 0.4,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.21052631578947367,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.35294117647058826,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.3870967741935484,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.5384615384615384,
+            "recall": 0.5,
+            "f1-score": 0.5185185185185185,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.07142857142857142,
+            "recall": 0.0625,
+            "f1-score": 0.06666666666666667,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.11538461538461539,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.15,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.8125,
+            "recall": 0.8125,
+            "f1-score": 0.8125,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.7619047619047619,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.47058823529411764,
+            "recall": 0.5,
+            "f1-score": 0.48484848484848486,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.3,
+            "recall": 0.5,
+            "f1-score": 0.375,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.3333333333333333,
+            "recall": 0.2777777777777778,
+            "f1-score": 0.30303030303030304,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 0.9375,
+            "recall": 0.9375,
+            "f1-score": 0.9375,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1-score": 0.7777777777777778,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1-score": 0.7777777777777778,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.75,
+            "recall": 0.375,
+            "f1-score": 0.5,
+            "support": 8.0
+          },
+          "accuracy": 0.6113475177304964,
+          "macro avg": {
+            "precision": 0.5294519869690681,
+            "recall": 0.5158133343427461,
+            "f1-score": 0.5095811929325172,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.6238147628993378,
+            "recall": 0.6113475177304964,
+            "f1-score": 0.6073539718872173,
+            "support": 705.0
+          }
+        },
+        "feature_importances": null,
+        "elapsed_s": 13.3
+      }
+    },
+    "hos": {
+      "RandomForest": {
+        "accuracy": 0.42411347517730497,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 20,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.6111111111111112,
+            "recall": 0.4583333333333333,
+            "f1-score": 0.5238095238095238,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.29411764705882354,
+            "recall": 0.4166666666666667,
+            "f1-score": 0.3448275862068966,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.25688073394495414,
+            "recall": 0.32941176470588235,
+            "f1-score": 0.28865979381443296,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 0.4715447154471545,
+            "recall": 0.7733333333333333,
+            "f1-score": 0.5858585858585859,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.4,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.36363636363636365,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 0.7083333333333334,
+            "recall": 0.5,
+            "f1-score": 0.5862068965517241,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.7096774193548387,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.7457627118644068,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.14285714285714285,
+            "recall": 0.08333333333333333,
+            "f1-score": 0.10526315789473684,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.3333333333333333,
+            "recall": 0.2857142857142857,
+            "f1-score": 0.3076923076923077,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.15,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.17647058823529413,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.36363636363636365,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.34782608695652173,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.5294117647058824,
+            "recall": 0.5625,
+            "f1-score": 0.5454545454545454,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.25,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.18181818181818182,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.3333333333333333,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.2608695652173913,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.9,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.75,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 0.5263157894736842,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.6060606060606061,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.375,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.4,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.23076923076923078,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.2222222222222222,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.06666666666666667,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.06896551724137931,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.631578947368421,
+            "recall": 0.75,
+            "f1-score": 0.6857142857142857,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.4,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.35294117647058826,
+            "recall": 0.375,
+            "f1-score": 0.36363636363636365,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5555555555555556,
+            "f1-score": 0.4166666666666667,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.9375,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8823529411764706,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.5714285714285714,
+            "recall": 0.25,
+            "f1-score": 0.34782608695652173,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1-score": 0.75,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.5,
+            "recall": 0.125,
+            "f1-score": 0.2,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1-score": 0.7777777777777778,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.5714285714285714,
+            "recall": 0.5,
+            "f1-score": 0.5333333333333333,
+            "support": 8.0
+          },
+          "accuracy": 0.42411347517730497,
+          "macro avg": {
+            "precision": 0.39192430229879294,
+            "recall": 0.37437170363640954,
+            "f1-score": 0.37212734312963625,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.4093008092333228,
+            "recall": 0.42411347517730497,
+            "f1-score": 0.40498714133431846,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.053570810583224604,
+          0.13698278556500146,
+          0.03907547356767489,
+          0.044909900606100804,
+          0.061217989492561735,
+          0.049676971439453,
+          0.045326403698201546,
+          0.05067356989679746,
+          0.05766878549199504,
+          0.06057816990145558,
+          0.036691200415400964,
+          0.05960014347615738,
+          0.04531029545549406,
+          0.03853912935831914,
+          0.01103073256398461,
+          0.03662340935236524,
+          0.041923227469247065,
+          0.04690481120381762,
+          0.04532388061152792,
+          0.03837230985121989
+        ],
+        "elapsed_s": 0.7
+      },
+      "GradientBoosting": {
+        "accuracy": 0.3943262411347518,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 20,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.7333333333333333,
+            "recall": 0.4583333333333333,
+            "f1-score": 0.5641025641025641,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.2857142857142857,
+            "recall": 0.16666666666666666,
+            "f1-score": 0.21052631578947367,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.28888888888888886,
+            "recall": 0.3058823529411765,
+            "f1-score": 0.29714285714285715,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 0.4491525423728814,
+            "recall": 0.7066666666666667,
+            "f1-score": 0.5492227979274611,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.2553191489361702,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.2891566265060241,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 0.7083333333333334,
+            "recall": 0.5,
+            "f1-score": 0.5862068965517241,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.6176470588235294,
+            "recall": 0.75,
+            "f1-score": 0.6774193548387096,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.05263157894736842,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.06060606060606061,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.13333333333333333,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.13793103448275862,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.4444444444444444,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.38095238095238093,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.07692307692307693,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.07407407407407407,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.5714285714285714,
+            "recall": 0.5,
+            "f1-score": 0.5333333333333333,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.2,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.10526315789473684,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.4166666666666667,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.38461538461538464,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.1,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.08333333333333333,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.16666666666666666,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.1,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.5833333333333334,
+            "recall": 0.5,
+            "f1-score": 0.5384615384615384,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 0.6,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.6206896551724138,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.25,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.23076923076923078,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.17647058823529413,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.1935483870967742,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.07142857142857142,
+            "recall": 0.0625,
+            "f1-score": 0.06666666666666667,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.09523809523809523,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.11428571428571428,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.5882352941176471,
+            "recall": 0.625,
+            "f1-score": 0.6060606060606061,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.3333333333333333,
+            "recall": 0.4166666666666667,
+            "f1-score": 0.37037037037037035,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.375,
+            "recall": 0.375,
+            "f1-score": 0.375,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.2916666666666667,
+            "recall": 0.3888888888888889,
+            "f1-score": 0.3333333333333333,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.7777777777777778,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.3076923076923077,
+            "recall": 0.25,
+            "f1-score": 0.27586206896551724,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 0.6875,
+            "f1-score": 0.8148148148148148,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.4,
+            "recall": 0.25,
+            "f1-score": 0.3076923076923077,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.5714285714285714,
+            "recall": 0.5,
+            "f1-score": 0.5333333333333333,
+            "support": 8.0
+          },
+          "accuracy": 0.3943262411347518,
+          "macro avg": {
+            "precision": 0.3762726342990311,
+            "recall": 0.3502426375955787,
+            "f1-score": 0.35655545883652096,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.3925283866304064,
+            "recall": 0.3943262411347518,
+            "f1-score": 0.38485675031874955,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.07392582891116593,
+          0.3149565174941581,
+          0.02264139533810465,
+          0.035073121387442445,
+          0.05637385389890693,
+          0.03226564253561433,
+          0.033287248585658825,
+          0.03274602633115455,
+          0.046363072731605066,
+          0.04537237255408718,
+          0.021382924838617038,
+          0.04333527568853345,
+          0.031608825279078344,
+          0.03382367848970747,
+          0.013538749802226828,
+          0.02991209176403559,
+          0.03151318914541672,
+          0.03209709852055174,
+          0.044992897766215977,
+          0.02479018893771864
+        ],
+        "elapsed_s": 74.7
+      },
+      "MLP": {
+        "accuracy": 0.17872340425531916,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 20,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 0.43478260869565216,
+            "recall": 0.4166666666666667,
+            "f1-score": 0.425531914893617,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.07421875,
+            "recall": 0.2235294117647059,
+            "f1-score": 0.11143695014662756,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 0.10526315789473684,
+            "recall": 0.16,
+            "f1-score": 0.12698412698412698,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 0.2,
+            "recall": 0.027777777777777776,
+            "f1-score": 0.04878048780487805,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.20833333333333334,
+            "recall": 0.17857142857142858,
+            "f1-score": 0.19230769230769232,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.2857142857142857,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.19047619047619047,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 0.18181818181818182,
+            "recall": 0.16666666666666666,
+            "f1-score": 0.17391304347826086,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 0.2,
+            "recall": 0.5625,
+            "f1-score": 0.29508196721311475,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.3,
+            "recall": 0.21428571428571427,
+            "f1-score": 0.25,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.5,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.125,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 0.6923076923076923,
+            "recall": 0.6428571428571429,
+            "f1-score": 0.6666666666666666,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 0.2222222222222222,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.2926829268292683,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.2777777777777778,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.3125,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.14285714285714285,
+            "recall": 0.07142857142857142,
+            "f1-score": 0.09523809523809523,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.07692307692307693,
+            "recall": 0.0625,
+            "f1-score": 0.06896551724137931,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.22857142857142856,
+            "recall": 0.5,
+            "f1-score": 0.3137254901960784,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.30303030303030304,
+            "recall": 0.5555555555555556,
+            "f1-score": 0.39215686274509803,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 0.5,
+            "recall": 0.0625,
+            "f1-score": 0.1111111111111111,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.8,
+            "recall": 0.5,
+            "f1-score": 0.6153846153846154,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 0.2,
+            "recall": 0.125,
+            "f1-score": 0.15384615384615385,
+            "support": 8.0
+          },
+          "accuracy": 0.17872340425531916,
+          "macro avg": {
+            "precision": 0.18740053949042793,
+            "recall": 0.1748605117722765,
+            "f1-score": 0.16112945439359388,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.16920287936272008,
+            "recall": 0.17872340425531916,
+            "f1-score": 0.15223701429140102,
+            "support": 705.0
+          }
+        },
+        "feature_importances": null,
+        "elapsed_s": 14.0
+      }
+    },
+    "combined": {
+      "RandomForest": {
+        "accuracy": 0.9574468085106383,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 111,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8252427184466019,
+            "recall": 1.0,
+            "f1-score": 0.9042553191489362,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.7222222222222222,
+            "f1-score": 0.8387096774193549,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.6111111111111112,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.6875,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.8235294117647058,
+            "recall": 1.0,
+            "f1-score": 0.9032258064516129,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9411764705882353,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "accuracy": 0.9574468085106383,
+          "macro avg": {
+            "precision": 0.976618465981687,
+            "recall": 0.9600493350493349,
+            "f1-score": 0.9639282017320089,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.965220706933649,
+            "recall": 0.9574468085106383,
+            "f1-score": 0.956271418695644,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.01710591392031976,
+          0.019732610224782093,
+          0.021269512640269016,
+          0.012027853994141505,
+          0.020148439153685686,
+          0.027384441696574217,
+          0.04036741588831852,
+          0.005305459462926643,
+          0.00028815910819845846,
+          0.016507036540776565,
+          0.0002974033522739018,
+          0.018484642916338695,
+          0.0008938194302866464,
+          0.0006930206519144556,
+          0.0002501177096716323,
+          0.009801073006589533,
+          0.024095815515083933,
+          0.019451061752927535,
+          0.017253992926944878,
+          0.03905109018660299,
+          0.024026875510034795,
+          0.033327714954876506,
+          0.03521275825220354,
+          0.02184045292572852,
+          0.03212523963904256,
+          0.00020454584494070395,
+          0.020641095499110734,
+          0.025368276713041968,
+          0.00039958018470808647,
+          0.00026288437188820975,
+          0.019079277792481465,
+          0.026865422717909596,
+          0.0005068746452050676,
+          0.0005448690114701247,
+          0.0006495095093044111,
+          0.0006283260230500772,
+          0.0004220353628316167,
+          0.011662802919611559,
+          0.010822929889564745,
+          0.01260714474970388,
+          0.011794681357593224,
+          0.010941833631765032,
+          0.007823034196833917,
+          0.00831305696006365,
+          0.0007638969944474853,
+          0.000909111457073477,
+          0.0017045095508795441,
+          0.0010047298894093324,
+          0.0016724823101352602,
+          0.002192471942769588,
+          0.034220188620580703,
+          0.03951291772287546,
+          0.035360243951359484,
+          0.01858736862597662,
+          0.0030722510260419804,
+          0.0042820403304277155,
+          0.0034279222659357473,
+          0.004517765574801481,
+          0.003147817840360224,
+          0.002804813937544843,
+          0.0007708507237340109,
+          0.00358289280652161,
+          0.002052089212586329,
+          0.0009206664792394667,
+          0.0015759176538162928,
+          0.008481009617599341,
+          0.00130945509638059,
+          0.00036242919819491783,
+          0.0003679566842089797,
+          0.0002899261394435545,
+          0.0006059938056153007,
+          0.00046411201460393214,
+          0.0027572096539337947,
+          0.002789209085255038,
+          0.0003818099220176222,
+          0.004040589903885156,
+          0.006143878283498388,
+          0.001996810225079154,
+          0.0046279761817627114,
+          0.007537925249566333,
+          0.007882784893481317,
+          0.012699373138913046,
+          0.042558614757789125,
+          0.026318081605443956,
+          0.01346071709537112,
+          0.011308672445009271,
+          0.005772352213995477,
+          0.005449151225777688,
+          0.008309574842373739,
+          0.00674587187499313,
+          0.013804885946085822,
+          0.000838387356398241,
+          0.001428224381849287,
+          0.00044222985030528857,
+          0.000517175528692495,
+          0.0008557952920936816,
+          0.0007400481919450907,
+          0.0004416847553600208,
+          0.0008243343270876427,
+          0.0006486248346445516,
+          0.0007368577678548482,
+          0.00041303245205469947,
+          0.0006179244974798422,
+          0.00039724761453254013,
+          0.00021262241874429064,
+          5.8991003880553984e-05,
+          0.00016651336261915174,
+          0.00031230750730395953,
+          0.0003326293030360526,
+          0.0006751655337812637,
+          0.00031078126195086605
+        ],
+        "elapsed_s": 0.8
+      },
+      "GradientBoosting": {
+        "accuracy": 0.9432624113475178,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 111,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.9090909090909091,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.8173076923076923,
+            "recall": 1.0,
+            "f1-score": 0.8994708994708994,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9565217391304348,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 0.9411764705882353,
+            "f1-score": 0.9696969696969697,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 0.9032258064516129,
+            "recall": 1.0,
+            "f1-score": 0.9491525423728814,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8571428571428571,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.8461538461538461,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9565217391304348,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1-score": 0.967741935483871,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1-score": 0.9655172413793104,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.35714285714285715,
+            "f1-score": 0.5263157894736842,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.9230769230769231,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.8571428571428571,
+            "recall": 0.375,
+            "f1-score": 0.5217391304347826,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 0.75,
+            "recall": 0.9375,
+            "f1-score": 0.8333333333333334,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1-score": 0.9411764705882353,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "accuracy": 0.9432624113475178,
+          "macro avg": {
+            "precision": 0.9591860695276255,
+            "recall": 0.9343818608524491,
+            "f1-score": 0.9385319629456669,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.9493555982717838,
+            "recall": 0.9432624113475178,
+            "f1-score": 0.9388132956643055,
+            "support": 705.0
+          }
+        },
+        "feature_importances": [
+          0.0009066027606256328,
+          0.015083491174322346,
+          0.0026231309957644613,
+          0.00444661967834413,
+          0.0005077732231514218,
+          0.11121809683591569,
+          0.023738845257719233,
+          0.0086365500424477,
+          1.843651520060513e-05,
+          0.0002800515925307457,
+          0.00010250211235880214,
+          0.0016364432283022799,
+          0.0015858738169512265,
+          2.408344495778983e-05,
+          0.00025789842405270013,
+          0.0076154629055896735,
+          0.07620300533652231,
+          0.009584717414069795,
+          0.0009157880725272205,
+          0.01380231181688759,
+          0.01526461402104565,
+          0.019887881945944118,
+          0.011802111885348115,
+          0.015180998266145874,
+          0.04757013760222004,
+          0.00031241151279978773,
+          0.01134132122899552,
+          0.006549099996512171,
+          3.2030603051523734e-06,
+          0.00024741412703639264,
+          0.001025909982594062,
+          0.004251534528972537,
+          0.0002258465168324403,
+          0.00031583164968831983,
+          0.0003706131944583954,
+          9.482275042366337e-06,
+          0.0010566701851015877,
+          0.003989294644866563,
+          0.012973106634349902,
+          0.07060671294076556,
+          0.0927434206471318,
+          0.005709451643165655,
+          0.010108987170043224,
+          0.004397695994959836,
+          0.0006049317363880564,
+          0.0009773916655070594,
+          0.0001401247862242378,
+          0.0005786255869039264,
+          0.00023670553320459076,
+          0.0014919819781271794,
+          0.02135650904008697,
+          0.01395757211941788,
+          0.026987581658916786,
+          0.006174920508574499,
+          6.534865685820561e-07,
+          0.0015406827669853277,
+          0.001347577022335909,
+          0.0021803928993660983,
+          0.00044936328999404645,
+          0.0021511589435785033,
+          0.00019685183030937388,
+          0.0031444405676561964,
+          0.00042096415765693836,
+          3.4770739825203e-05,
+          0.001309570966558687,
+          0.00793288079952395,
+          3.954822309658888e-05,
+          0.00040324228875404465,
+          0.00039205902399881297,
+          0.0007987868163953686,
+          0.0013449548580404126,
+          1.7090775153170283e-05,
+          0.001762453313916467,
+          0.0026372806814624434,
+          0.000225182883312027,
+          2.0222631250791176e-06,
+          0.002266858213408685,
+          0.001520565418683335,
+          0.0069132198720338045,
+          0.0005714367820650042,
+          0.004280041954801958,
+          0.010249701100945929,
+          0.0837576810567429,
+          0.048968086693475604,
+          0.03920009210078247,
+          0.011561797630786266,
+          0.001770596421509865,
+          0.043641924074756845,
+          5.876156008800545e-05,
+          0.000386253448862781,
+          0.017418734710547487,
+          0.0008199897372515482,
+          0.0007176122376353932,
+          0.0005469023098424036,
+          0.0010168607911971502,
+          0.0005673645610954206,
+          0.00011417434050654089,
+          0.00041203715234158073,
+          0.0001949308981711332,
+          0.00030987099090404443,
+          0.0004188091541368024,
+          4.670102102568562e-05,
+          0.002051065018940244,
+          2.66107487376551e-06,
+          0.0022394089687938455,
+          2.4344687593995095e-06,
+          0.0008584847868303182,
+          2.28663431447458e-05,
+          0.00040038796365919854,
+          0.0005980408968437685,
+          0.00012393673102523451
+        ],
+        "elapsed_s": 303.6
+      },
+      "MLP": {
+        "accuracy": 0.8595744680851064,
+        "train_samples": 2810,
+        "val_samples": 705,
+        "n_features": 111,
+        "classification_report": {
+          "DAUTEL EVO NANO": {
+            "precision": 1.0,
+            "recall": 0.7083333333333334,
+            "f1-score": 0.8292682926829268,
+            "support": 24.0
+          },
+          "DEVENTION DEVO": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 12.0
+          },
+          "DJI AVATA2": {
+            "precision": 0.9550561797752809,
+            "recall": 1.0,
+            "f1-score": 0.9770114942528736,
+            "support": 85.0
+          },
+          "DJI FPV COMBO": {
+            "precision": 1.0,
+            "recall": 0.96,
+            "f1-score": 0.9795918367346939,
+            "support": 75.0
+          },
+          "DJI MAVIC3 PRO": {
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.9565217391304348,
+            "support": 36.0
+          },
+          "DJI MINI3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 34.0
+          },
+          "DJI MINI4 PRO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 28.0
+          },
+          "FLYSKY EL 18": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.6857142857142857,
+            "support": 14.0
+          },
+          "FLYSKY FS I6X": {
+            "precision": 1.0,
+            "recall": 0.14285714285714285,
+            "f1-score": 0.25,
+            "support": 7.0
+          },
+          "FLYSKY NV 14": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FRSKY X14": {
+            "precision": 0.5333333333333333,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.5517241379310345,
+            "support": 14.0
+          },
+          "FRSKY X20R": {
+            "precision": 0.21052631578947367,
+            "recall": 0.2857142857142857,
+            "f1-score": 0.24242424242424243,
+            "support": 14.0
+          },
+          "FRSKY X9DP2019": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "FUTABA T10J": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1-score": 0.9333333333333333,
+            "support": 14.0
+          },
+          "FUTABA T14SG": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "FUTABA T16IZ": {
+            "precision": 0.5714285714285714,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.5714285714285714,
+            "support": 14.0
+          },
+          "FUTABA T18SZ": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Herelink Hx4": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "JR PROPO XG14": {
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.7272727272727273,
+            "support": 14.0
+          },
+          "JR PROPO XG7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 14.0
+          },
+          "JUMPER T14": {
+            "precision": 0.8125,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.8666666666666667,
+            "support": 14.0
+          },
+          "JUMPER TProV2": {
+            "precision": 1.0,
+            "recall": 0.7857142857142857,
+            "f1-score": 0.88,
+            "support": 14.0
+          },
+          "RadioMaster BOXER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "RadioMaster TX16S": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8,
+            "support": 14.0
+          },
+          "Radiolink AT10 II": {
+            "precision": 0.38095238095238093,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.45714285714285713,
+            "support": 14.0
+          },
+          "Radiolink AT9S Pro": {
+            "precision": 0.2857142857142857,
+            "recall": 0.125,
+            "f1-score": 0.17391304347826086,
+            "support": 16.0
+          },
+          "SIYI FT24": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.75,
+            "support": 14.0
+          },
+          "SIYI MK15": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "SIYI MK32": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "SKYDROID H12": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1-score": 0.9032258064516129,
+            "support": 16.0
+          },
+          "SKYDROID T10": {
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.7692307692307693,
+            "support": 18.0
+          },
+          "WFLY ET10": {
+            "precision": 0.8,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.8421052631578947,
+            "support": 18.0
+          },
+          "WFLY ET16S": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "WFLY WFT09SII": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 16.0
+          },
+          "YUNZHUO H12": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1-score": 0.9333333333333333,
+            "support": 8.0
+          },
+          "YUNZHUO H16": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1-score": 0.8888888888888888,
+            "support": 8.0
+          },
+          "YUNZHUO H30": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "accuracy": 0.8595744680851064,
+          "macro avg": {
+            "precision": 0.8250511356587643,
+            "recall": 0.8157357357357358,
+            "f1-score": 0.8045620888987949,
+            "support": 705.0
+          },
+          "weighted avg": {
+            "precision": 0.8646062153151626,
+            "recall": 0.8595744680851064,
+            "f1-score": 0.8532461416540793,
+            "support": 705.0
+          }
+        },
+        "feature_importances": null,
+        "elapsed_s": 38.6
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model": "MultiScale-LWM-MaxViT",
+  "dataset": "droneRFb",
+  "accuracy": 0.1977715877437326,
+  "f1_macro": 0.04717607973421927,
+  "params": 2419655,
+  "params_M": 2.419655,
+  "train_time_sec": 2961.483991622925,
+  "grid_widths": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "dim": 96,
+  "num_blocks": 2,
+  "max_segments": 100000,
+  "best_val_acc": 0.1977715877437326
+}

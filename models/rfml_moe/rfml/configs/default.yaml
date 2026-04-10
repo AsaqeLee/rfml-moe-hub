@@ -1,0 +1,345 @@
+# Drone RF Signal Detection - MoE Pipeline Configuration
+
+project:
+  name: "rfml-moe-drone-detector"
+  seed: 42
+  device: "cuda"
+  precision: "bf16"
+  num_workers: 12
+  pin_memory: true
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  shards_dir: "data/shards"
+  shard_size_mb: 1000
+  sample_length: 32768  # IQ samples per segment
+  sampling_rate: 100_000_000  # 100 MSps (RFUAV)
+
+  datasets:
+    rfuav:
+      enabled: true
+      source: "huggingface"
+      repo_id: "RFUAV/RFUAV-1.3T"
+      size_tb: 1.3
+      format: "binary_iq_fp32"
+      bands: ["2.4GHz", "5.8GHz"]
+      num_drones: 37
+
+    dronedetect_v2:
+      enabled: true
+      source: "ieee_dataport"
+      dataset_id: "17703"
+      size_gb: 10
+      format: "complex_iq_dat"
+      bands: ["2.4375GHz"]
+
+    cardrf:
+      enabled: true
+      source: "ieee_dataport"
+      dataset_id: "cardrf"
+      size_gb: 65
+      format: "mat"
+      bands: ["2.4GHz"]
+
+    dronerf:
+      enabled: true
+      source: "mendeley"
+      doi: "10.17632/s3c4gf5ng2.1"
+      size_gb: 40
+      format: "csv"
+      bands: ["2.4GHz"]
+
+    tampere_zenodo:
+      enabled: true
+      source: "zenodo"
+      record_id: "4264467"
+      size_gb: 5
+      format: "iq_int16"
+      bands: ["2.44GHz", "5.8GHz"]
+
+    # --- Paper Integration: New Datasets ---
+
+    lowsnr_dronerf:
+      enabled: true
+      source: "kaggle"
+      dataset_id: "Lowsnr_dronerf"
+      size_gb: 52
+      format: "binary_iq_fp32"
+      bands: ["2.4GHz", "2.44GHz"]
+      sample_rate: 10_000_000  # 10 MHz
+      samples: 137_560_000
+      modes: ["off", "connected", "armed", "flying"]
+      description: "Tanveer et al. 2026 — low-SNR binary detection dataset"
+
+  augmentation:
+    awgn_snr_range: [-20, 20]
+    awgn_step_db: 2
+    cfo_max_hz: 1000
+    phase_rotation: true
+    amplitude_scale: [0.5, 2.0]
+    cyclic_time_shift: true
+    multipath_fading: true
+    interference_injection: true
+
+features:
+  spectrogram:
+    fft_size: 512
+    hop_length: 256  # 50% overlap
+    window: "hann"
+    output_size: [512, 512]
+    channels: 3  # magnitude, phase, instantaneous_frequency
+    use_complex: true  # separate FFT of real and imaginary
+
+  hos:
+    max_order: 6
+    cumulants: ["C20", "C21", "C40", "C41", "C42", "C60", "C61", "C62", "C63"]
+    normalize: true  # power-invariant normalization
+    feature_dim: 20
+
+  cyclostationary:
+    num_cycle_freqs: 256
+    fft_size: 1024
+    scf_method: "fam"  # frequency-smoothing approach (FAM)
+    output_dim: 512
+
+  wavelet:
+    library: "kymatio"
+    J: 8  # octaves
+    Q: 8  # wavelets per octave
+    order: 2  # second-order scattering
+
+  bispectrum:
+    enabled: false  # computationally expensive, optional
+    output_size: [224, 224]
+
+  # --- Paper Integration: New Feature Extractors ---
+
+  energy_gate:
+    enabled: true
+    p_fa: 0.01                    # Neyman-Pearson false alarm probability
+    buffer_size: 1024             # Rolling buffer for noise floor estimation
+    calibration_percentile: 10.0  # Percentile of buffer used for noise calibration
+
+  emd:
+    num_imfs: 4                   # Total IMFs to extract via sifting
+    noise_imfs: 2                 # High-frequency IMFs to discard as noise
+    max_sifting: 20               # Max sifting iterations per IMF
+    snr_threshold_db: -5.0        # Apply EMD when estimated SNR below this
+
+  vmd:
+    K: 5                          # Number of VMD modes (Fu et al.)
+    alpha: 2000.0                 # Bandwidth penalty (higher = narrower modes)
+    tau: 0.0                      # Lagrangian multiplier step
+    max_iter: 500                 # Max ADMM iterations
+    tol: 1.0e-7                   # Convergence tolerance
+    pcc_threshold: 0.3            # Pearson CC threshold for effective IMF selection
+
+  gaf:
+    n: 256                        # PAA target length → n×n image (Fu et al. 256×256)
+    method: "both"                # "summation", "difference", or "both"
+
+experts:
+  iq_expert:
+    name: "SignalFormerIQ"
+    type: "complex_cnn_transformer"  # complex_cnn_transformer | mamba_ssm | iqformer
+    conv_channels: [64, 128, 256]
+    kernel_size: 7
+    num_transformer_layers: 4
+    num_heads: 8
+    embed_dim: 512
+    dropout: 0.1
+    params_approx: "15-25M"
+    # Mamba/SSM alternative (MAMCA, arXiv:2405.11263)
+    mamba:
+      d_model: 256
+      d_state: 16
+      d_inner: 512
+      num_layers: 6
+      use_denoiser: true  # soft-threshold denoiser for low-SNR
+    # IQFormer alternative (IEEE TCCN 2025)
+    iqformer:
+      embed_dim: 256
+      num_heads: 8
+      num_blocks: 4
+      stft_fft_size: 256
+      stft_hop_length: 64
+
+  spectrogram_expert:
+    name: "EfficientNetSpec"
+    type: "efficientnet"
+    variant: "b2"  # start with B2, upgrade if needed
+    pretrained: true
+    input_channels: 3
+    embed_dim: 512
+    params_approx: "9M"
+
+  hos_expert:
+    name: "FTTransformerHOS"
+    type: "ft_transformer"
+    num_layers: 3
+    num_heads: 8
+    embed_dim: 192
+    ffn_dim: 768
+    dropout: 0.1
+    params_approx: "2-5M"
+
+  cyclo_expert:
+    name: "TCNCyclo"
+    type: "tcn"
+    num_filters: 64
+    kernel_size: 8
+    dilations: [1, 2, 4, 8, 16, 32]
+    embed_dim: 512
+    dropout: 0.2
+    params_approx: "5-10M"
+
+  # --- Paper Integration: New Experts ---
+
+  vmd_gaf_expert:
+    name: "VMDGAFExpert"
+    type: "cnn"
+    input_channels: 3             # GASF_denoised, GADF, GASF_raw
+    image_size: 256               # 256×256 GAF images (Fu et al.)
+    conv_channels: [32, 64, 128, 256]
+    embed_dim: 512
+    dropout: 0.5
+    params_approx: "5.8M"
+
+  tfms_expert:
+    name: "TFMSExpert"
+    type: "dual_branch_cnn"
+    L: 5                          # Number of conv blocks per branch
+    kernel_size: 5                # Conv1D kernel size
+    D: 3                          # Number of dense layers after merge
+    n_dense: 128                  # Neurons per dense layer
+    embed_dim: 512
+    dropout: 0.25
+    params_approx: "4.5M"
+
+moe:
+  num_experts: 6
+  top_k: 2
+  capacity_factor: 1.25
+  router_type: "snr_adaptive"  # snr_adaptive | expert_choice | token_choice | deepseek | soft_moe
+  router_dim: 512
+  router_noise: 0.01
+  shared_expert: true  # DeepSeek-style always-active shared expert
+  snr_adaptive_routing: true  # Enable SNR-conditioned expert selection
+  snr_embedding_dim: 32       # Dimension of SNR embedding in router
+
+  load_balancing:
+    method: "router_z_loss"  # router_z_loss | deepseek_bias | none (for soft_moe)
+    z_loss_coeff: 0.002  # Increased from 0.001 for 6-expert load balancing
+    deepseek_epsilon: 0.001  # bias update rate for DeepSeek routing
+    monitor_similarity: true
+    similarity_threshold: 0.7
+
+  cross_attention:
+    num_layers: 1  # Reduced from 2 for 6 experts (O(M²) cost: 30 pairs vs 12)
+    num_heads: 8
+    embed_dim: 512
+
+classification:
+  hierarchy:
+    level1_classes: 2    # drone / no-drone
+    level2_classes: 15   # drone type + link type
+    level3_classes: 50   # make/model/protocol
+
+  loss_weights:
+    early:  [0.5, 0.3, 0.2]
+    late:   [0.1, 0.2, 0.7]
+    transition_epoch: 100
+
+training:
+  phases:
+    pretrain:
+      epochs: 75
+      lr: 1e-3
+      subset_fraction: 0.3
+      method: "mae+contrastive"  # mae+contrastive | jepa | mae_only
+      description: "Self-supervised pretraining per expert"
+      # Paper Integration: new expert pretraining methods
+      vmd_gaf_method: "contrastive"     # MoCo-v3 with augmented VMD views
+      tfms_method: "masked_frequency"   # Masked frequency prediction (20% mask ratio)
+      tfms_mask_ratio: 0.2
+      jepa:
+        masking_strategy: "multi_block"  # time | channel | multi_block | random
+        mask_ratio: 0.6
+        momentum_start: 0.996
+        momentum_end: 1.0
+        predictor_depth: 2
+        vicreg_lambda_inv: 25.0
+        vicreg_lambda_var: 25.0
+        vicreg_lambda_cov: 1.0
+
+    supervised:
+      epochs: 75
+      lr: 5e-4
+      curriculum: true
+      snr_start_db: 20
+      snr_end_db: -10
+      description: "Supervised curriculum training per expert"
+
+    gating:
+      epochs: 35
+      lr: 1e-4
+      freeze_experts: true
+      description: "Train gating + shared layers only"
+
+    finetune:
+      epochs: 15
+      lr: 1e-5
+      freeze_experts: false
+      description: "End-to-end fine-tuning"
+      # Paper Integration: differential learning rates
+      new_expert_lr_multiplier: 2.0     # VMD-GAF and TFMS get 2× base LR
+      old_expert_lr_multiplier: 0.5     # Existing experts get 0.5× base LR
+
+  optimizer:
+    type: "adamw"
+    weight_decay: 0.01
+    betas: [0.9, 0.999]
+    grad_clip: 1.0
+
+  scheduler:
+    type: "cosine_annealing_warm_restarts"
+    T_0: 10
+    T_mult: 2
+    eta_min: 1e-7
+
+  batch_size: 128
+  accumulation_steps: 4  # effective batch = 512
+
+  checkpointing:
+    save_every_epochs: 5
+    keep_top_k: 3
+    save_dir: "checkpoints"
+
+evaluation:
+  snr_range: [-20, 30]
+  snr_step: 2
+  metrics:
+    - "accuracy"
+    - "balanced_accuracy"
+    - "precision"
+    - "recall"
+    - "f1_macro"
+    - "f1_weighted"
+    - "hierarchical_f1"
+    - "confusion_matrix"
+
+  cross_dataset: true
+  open_set:
+    enabled: true
+    method: "openmax"
+    tail_size: 20
+
+rocm:
+  env:
+    PYTORCH_HIP_ALLOC_CONF: "expandable_segments:True"
+    TORCH_BLAS_PREFER_HIPBLASLT: "1"
+    HIP_FORCE_DEV_KERNARG: "1"
+    GPU_MAX_HW_QUEUES: "2"
+    MIOPEN_FIND_MODE: "3"
+    MIOPEN_FIND_ENFORCE: "3"

@@ -1,0 +1,91 @@
+{
+  "expert": "NeuroSymbolicRFFExpert",
+  "dataset": "rfuav",
+  "status": "success",
+  "accuracy": 0.7398457911170586,
+  "f1_macro": 0.6986463095645726,
+  "best_val_acc": 0.7398457911170586,
+  "params": 479498,
+  "params_M": 0.48,
+  "train_time_sec": 9913.6,
+  "epochs_trained": 30,
+  "avg_inference_ms": 0.449,
+  "total_inference_sec": 35.23,
+  "num_val_samples": 78465,
+  "per_class": {
+    "DJI AVATA2": {
+      "precision": 0.6279922832377796,
+      "recall": 0.8921485370184513,
+      "f1-score": 0.7371190738171555,
+      "support": 25906.0
+    },
+    "DJI FPV COMBO": {
+      "precision": 0.9213412267080745,
+      "recall": 0.8338237231566467,
+      "f1-score": 0.8754005394315222,
+      "support": 22771.0
+    },
+    "DJI MAVIC3 PRO": {
+      "precision": 0.8187075321671244,
+      "recall": 0.5209272376046362,
+      "f1-score": 0.636721385203508,
+      "support": 10871.0
+    },
+    "DJI MINI3": {
+      "precision": 0.7620477815699659,
+      "recall": 0.5380759591285907,
+      "f1-score": 0.63077010000565,
+      "support": 10374.0
+    },
+    "DJI MINI4 PRO": {
+      "precision": 0.6911332941867293,
+      "recall": 0.5510944633032893,
+      "f1-score": 0.6132204493650277,
+      "support": 8543.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      23112,
+      1072,
+      130,
+      828,
+      764
+    ],
+    [
+      2100,
+      18987,
+      775,
+      222,
+      687
+    ],
+    [
+      4501,
+      217,
+      5663,
+      125,
+      365
+    ],
+    [
+      4255,
+      101,
+      148,
+      5582,
+      288
+    ],
+    [
+      2835,
+      231,
+      201,
+      568,
+      4708
+    ]
+  ],
+  "class_names": [
+    "DJI AVATA2",
+    "DJI FPV COMBO",
+    "DJI MAVIC3 PRO",
+    "DJI MINI3",
+    "DJI MINI4 PRO"
+  ]
+}

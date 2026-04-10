@@ -1,0 +1,6 @@
+{
+  "model": "yolo11n-cls",
+  "accuracy": 0.9741573033707865,
+  "f1_macro": 0.9668721746614066,
+  "type": "yolo-cls"
+}

@@ -1,0 +1,37 @@
+{
+  "convnext_base": {
+    "model": "convnext_base",
+    "accuracy": 0.9196179864703542,
+    "f1_macro": 0.9184156981939232,
+    "params": 87573639,
+    "time": 3617.1456005573273
+  },
+  "maxvit_base": {
+    "model": "maxvit_base",
+    "accuracy": 0.8954436927974533,
+    "f1_macro": 0.8994094990196081,
+    "params": 118704091,
+    "time": 3537.7456827163696
+  },
+  "efficientnet_b0": {
+    "model": "efficientnet_b0",
+    "accuracy": 0.8437624353362515,
+    "f1_macro": 0.8460398849633447,
+    "params": 4016515,
+    "time": 3930.402434825897
+  },
+  "resnet18": {
+    "model": "resnet18",
+    "accuracy": 0.7997413450059689,
+    "f1_macro": 0.7706361838482033,
+    "params": 11180103,
+    "time": 3670.8271872997284
+  },
+  "mobilenetv3": {
+    "model": "mobilenetv3",
+    "accuracy": 0.8672403501790689,
+    "f1_macro": 0.8675382648164841,
+    "params": 4210999,
+    "time": 4759.683799743652
+  }
+}

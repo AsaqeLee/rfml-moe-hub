@@ -1,0 +1,19 @@
+{
+  "model": "MultiScale-LWM-MaxViT",
+  "dataset": "rfuav",
+  "accuracy": 0.646050856771744,
+  "f1_macro": 0.6417238507242947,
+  "params": 2435045,
+  "params_M": 2.435045,
+  "train_time_sec": 3724.597976922989,
+  "grid_widths": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "dim": 96,
+  "num_blocks": 2,
+  "max_segments": 100000,
+  "best_val_acc": 0.646050856771744
+}

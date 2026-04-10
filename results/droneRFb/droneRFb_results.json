@@ -1,0 +1,30 @@
+{
+  "convnext_base": {
+    "error": "Number of classes, 19, does not match size of target_names, 13. Try specifying the labels parameter",
+    "model": "convnext_base"
+  },
+  "maxvit_base": {
+    "error": "Number of classes, 19, does not match size of target_names, 13. Try specifying the labels parameter",
+    "model": "maxvit_base"
+  },
+  "efficientnet_b0": {
+    "error": "Number of classes, 19, does not match size of target_names, 13. Try specifying the labels parameter",
+    "model": "efficientnet_b0"
+  },
+  "resnet18": {
+    "error": "Number of classes, 19, does not match size of target_names, 13. Try specifying the labels parameter",
+    "model": "resnet18"
+  },
+  "mobilenetv3_large": {
+    "error": "Number of classes, 19, does not match size of target_names, 13. Try specifying the labels parameter",
+    "model": "mobilenetv3_large"
+  },
+  "yolo11n-cls": {
+    "model": "yolo11n-cls",
+    "accuracy": 0.15792877039395145,
+    "f1_macro": 0.14750752924044994,
+    "type_accuracy": 0.19747313967369678,
+    "train_time_sec": 902.7119286060333,
+    "type": "yolo-cls"
+  }
+}
