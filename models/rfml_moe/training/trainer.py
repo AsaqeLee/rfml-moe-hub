@@ -17,6 +17,7 @@ from torch.utils.data import DataLoader, Subset
 
 from data.dataset import RFDataset, create_dataloaders
 from training.curriculum import HierarchyScheduler, SNRCurriculum
+from training.impairments import SignalAugmentationPipeline
 from training.pretraining import ContrastiveLearning, MaskedAutoencoder
 from training.schedulers import WarmupCosineScheduler, create_scheduler
 from utils.helpers import save_checkpoint
@@ -85,6 +86,17 @@ class MoETrainer:
             late_weights=cls_cfg.get("late", [0.1, 0.2, 0.7]),
             transition_epoch=int(cls_cfg.get("transition_epoch", 100)),
         )
+
+        # Sim-to-Real Augmentation
+        aug_cfg = train_cfg.get("augmentation", {})
+        sampling_rate = float(config.get_nested("data.sampling_rate", 100e6))
+        cfo_limit_hz = float(aug_cfg.get("cfo_max_hz", 1000))
+        
+        self.augmentation = SignalAugmentationPipeline(
+            cfo_limit=cfo_limit_hz / sampling_rate,
+            iq_gain_limit=float(aug_cfg.get("iq_gain_db", 1.0)),
+            iq_phase_limit=float(aug_cfg.get("iq_phase_deg", 5.0))
+        ).to(device)
 
         # Loss functions for hierarchical classification
         self.criterion_binary = nn.CrossEntropyLoss()
@@ -234,8 +246,10 @@ class MoETrainer:
     ):
         """Phase 2: Supervised training with SNR-based curriculum.
 
-        Starts with high-SNR samples and progressively introduces lower-SNR
-        data over training. Each expert is trained individually.
+        Starts with high-SNR (easy) samples and progressively introduces
+        lower-SNR (harder) samples via a linearly decreasing threshold.
+
+        Each expert is trained individually.
         """
         phase_cfg = self.config.get_nested("training.phases.supervised", {})
         epochs = int(phase_cfg.get("epochs", 75))
@@ -407,6 +421,10 @@ class MoETrainer:
             label_binary = batch["label_binary"].to(self.device, non_blocking=True)
             label_type = batch["label_type"].to(self.device, non_blocking=True)
             label_full = batch["label_full"].to(self.device, non_blocking=True)
+
+            # Sim-to-Real Augmentation
+            if phase in ["supervised", "finetune"]:
+                iq = self.augmentation(iq)
 
             with torch.amp.autocast("cuda", dtype=torch.bfloat16):
                 outputs = self.model(
